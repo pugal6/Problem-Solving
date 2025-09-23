@@ -128,3 +128,73 @@ Reverse: 27829
 Original: 92872
 Not a Palindrome Number
 ```
+
+8. Sum Of Digits
+```
+public static int sumOfDigits(int n) {  
+    int count = 0;  
+    while(n > 0) {  
+        n = n / 10;  
+        count++;  
+    }  
+    return count;  
+}
+```
+
+9. Armstrong Number
+     ##### Convert to String and do the work
+```
+public static boolean isArmstrong(int n) {  
+    String str = String.valueOf(n);  
+    int armstrong = 0;  
+    int count = 0;  
+    int temp = n;  
+    while(temp > 0) {  
+        temp = temp / 10;  
+        count++;  
+    }  
+    for(int i = 0; i < str.length(); i++) {  
+        armstrong += (int) Math.pow(Integer.parseInt(String.valueOf(str.charAt(i))),count);  
+    }  
+    return n == armstrong;  
+}
+```
+##### Use reverse number + sum of digit logic
+```
+public static boolean isArmstrong(int n) {  
+    int count = 0;  
+    int res = 0;  
+    int temp = n;  
+    while(temp > 0) {  
+        temp = temp / 10;  
+        count++;  
+    }  
+    temp = n;  
+    while (temp > 0) {  
+        int rem = temp % 10;  
+        res  += (int) Math.pow(rem,count);  
+        temp = temp / 10;  
+    }  
+    return res == n;  
+}
+```
+10. Fibonacci
+```
+public static void fibonacci(int n) {  
+    int n1 = 0;  
+    int n2 = 1;  
+    if (n >= 1) System.out.print(n1 + " ");  
+    if (n >= 2) System.out.print(n2 + " ");  
+    for(int i = 3; i <= n; i++) {  
+        int n3 = n1+n2;  
+        System.out.print( n3 + " ");  
+        n1 = n2;  
+        n2 = n3;  
+    }  
+}
+```
+
+```
+Output:
+fibonacci(5) → 0 1 1 2 3
+```
