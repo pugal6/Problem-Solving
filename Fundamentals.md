@@ -198,3 +198,47 @@ public static void fibonacci(int n) {
 Output:
 fibonacci(5) → 0 1 1 2 3
 ```
+
+11. Factorial
+```
+public static int factorial(int n) {  
+    int fact = 1;  
+    for(int i = 1; i <= n; i++) {  
+        fact *= i;  
+    }  
+    return fact;  
+}
+```
+
+12. Min, max element in an array
+```
+public static void minAndMaxInArr(int[] arr) {  
+    int min = Integer.MAX_VALUE;  
+    int max = Integer.MIN_VALUE;  
+    for(int n : arr) {  
+        if(n < min) {  
+            min = n;  
+        }  
+        else if(n > max) {  
+            max = n;  
+        }  
+    }  
+    System.out.println("min: " + min + " max: " + max);  
+}
+```
+
+13. Reverse Array
+```
+public static void reverseArr(int[] arr) {  
+    int left = 0;  
+    int right = arr.length -1;  
+    while (left < right) {  
+        int temp = arr[left];  
+        arr[left] = arr[right];  
+        arr[right] = temp;  
+        left++;  
+        right--;  
+    }  
+    System.out.println(Arrays.toString(arr));  
+}
+```
