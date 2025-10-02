@@ -276,3 +276,51 @@ public static int binarySearch(int[] arr, int target) {
     return -1;   // return start for search insert position problem
 }
 ```
+
+16. Rotate Array By One
+```
+public static void rotateArrByOne(int[] arr) {  
+    int last = arr[arr.length - 1];  
+    int i = arr.length - 1;  
+    while(i >  0) {  
+        arr[i] = arr[i-1];  
+        if(i == 1) {  
+            arr[0] = last;  
+        }  
+        i--;  
+    }  
+    System.out.println(Arrays.toString(arr));  
+}
+```
+
+17. Move Zeros
+
+```
+public  static void moveZeroes(int[] nums) {  
+    int i = 0;  
+    int j = 0;  
+    while(j < nums.length) {  
+        if(nums[j] != 0) {  
+            nums[i] = nums[j];  
+            i++;  
+        }  
+        j++;  
+    }  
+    i++;  
+    while(i < nums.length) {  
+        nums[i] = 0;  
+    }  
+}
+```
+
+18. Remove Duplicate
+
+```
+public static void removeDuplicate(int[] arr) {  
+    Set<Integer> set = new HashSet<>();  
+    for(int n : arr) {  
+        set.add(n);  
+    }  
+    System.out.println(set);  
+}
+```
