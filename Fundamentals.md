@@ -324,3 +324,36 @@ public static void removeDuplicate(int[] arr) {
     System.out.println(set);  
 }
 ```
+
+19. Missing Number
+
+```
+public static int missingNumber(int[] nums) {  
+    int actualSum = 0;  
+    int arrSum = 0;  
+    for(int i = 0; i < nums.length; i++) {  
+        arrSum += nums[i];  
+        actualSum += i+1;  
+    }  
+    return actualSum - arrSum;  
+}
+```
+
+20. Leaders in Array
+
+```
+public static void leadersInArr(int[] arr) {  
+    int maxRight = arr[arr.length - 1];  
+    List<Integer> list = new ArrayList<>();  
+    list.add(maxRight);  
+    for(int i = arr.length - 2; i >= 0; i--) {  
+        if(arr[i] > maxRight) {  
+            maxRight = arr[i];  
+            list.add(maxRight);  
+        }  
+    }  
+    Collections.reverse(list);  
+    System.out.println(list);  
+}
+```
+
