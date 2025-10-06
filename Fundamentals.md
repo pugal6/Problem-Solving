@@ -357,3 +357,15 @@ public static void leadersInArr(int[] arr) {
 }
 ```
 
+21. Print 1 to n using recursion
+
+```
+public static void printToN(int n) {  
+    if(n == 0) {  
+        return;  
+    }  
+   printToN(n-1);  
+   System.out.println(n);  
+}
+```
+
