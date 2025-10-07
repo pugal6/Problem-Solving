@@ -369,3 +369,28 @@ public static void printToN(int n) {
 }
 ```
 
+22. Reverse String
+
+
+```
+public static void revString(String s) {  
+   StringBuilder rev = new StringBuilder();  
+   for(int i = s.length() - 1; i >= 0; i--) {  
+       rev.append(s.charAt(i));  
+   }  
+    System.out.println(rev);  
+}
+```
+
+23. Valid Palindrome String
+
+```
+public static boolean isPalindrome(String s) {  
+    StringBuilder rev = new StringBuilder();  
+    for(int i = s.length() - 1; i >= 0; i--) {  
+        rev.append(s.charAt(i));  
+    }  
+   return rev.toString().equals(s);  
+}
+```
+
